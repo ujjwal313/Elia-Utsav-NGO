@@ -1,0 +1,24 @@
+---
+
+---
+
+<div class="w-full p-4 mt-2 flex items-center justify-between">
+  <p>Select your state:</p>
+  <select
+    class="p-2 bg-transparent outline-none border-2 border-[#CCD5AE] rounded-full"
+    id="state"
+    onchange="handleChange(this)"
+  >
+    <option value="">Select State</option>
+    <option value="/karnataka">Karnataka</option>
+    <option value="/maharashtra">Maharashtra</option>
+    <option value="/delhi">New Delhi</option>
+    <option value="/bihar">Bihar</option>
+  </select>
+</div>
+
+<script is:inline>
+  function handleChange(e) {
+    window.location.href = e.value;
+  }
+</script>
