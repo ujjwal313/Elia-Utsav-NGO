@@ -1,11 +1,15 @@
 ---
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
+import ng1 from "../assets/ng1.jpg";
+import ng2 from "../assets/ng2.jpg";
+
+const images = [ng1, ng2];
 ---
 
 <Layout>
   <div class="w-full flex flex-col flex-1 items-center">
-    <Carousel />
+    <Carousel images={images} />
     <div
       class="flex-1 bg-nagaland bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center lg:w-[50%]"
     >
