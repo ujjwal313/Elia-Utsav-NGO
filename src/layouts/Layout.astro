@@ -1,7 +1,6 @@
 ---
 import Carousel from "../components/Carousel.astro";
 import Header from "../components/Header.astro";
-import StateSelector from "../components/StateSelector.astro";
 ---
 
 <!doctype html>
@@ -13,11 +12,17 @@ import StateSelector from "../components/StateSelector.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Elia Utsav</title>
   </head>
-  <body class="bg-[#FDFBD4]">
+  <body class="bg-[#FDFBD4] flex flex-col items-center">
     <Header />
-    <Carousel />
-    <StateSelector />
+    <!-- <Carousel /> -->
     <slot />
+    <div class="w-full text-[0.75rem] flex justify-between p-2 md:w-[50%]">
+      <a href="/kashmir">Kashmir</a>
+      <a href="/kerala">Kerala</a>
+      <a href="/madhyapradesh">Madhya Pradesh</a>
+      <a href="/nagaland">Nagaland</a>
+      <a href="/maharashtra">Maharashtra</a>
+    </div>
   </body>
 </html>
 
