@@ -1,6 +1,14 @@
 ---
-import Carousel from "../components/Carousel.astro";
 import Header from "../components/Header.astro";
+const { pathname } = Astro.url;
+const pageBackgrounds: { [key: string]: string } = {
+  "/Elia-Utsav-NGO/": "bg-[#d8d2d4]",
+  "/Elia-Utsav-NGO/kashmir": "bg-[#d8d2d4]",
+  "/Elia-Utsav-NGO/kerala": "bg-[#cecdcb]",
+  "/Elia-Utsav-NGO/maharashtra": "bg-[#b4c5cf]",
+  "/Elia-Utsav-NGO/madhypradesh": "bg-[#bcb5ad]",
+};
+const backgroundClass = pageBackgrounds[pathname] || "bg-[#d8d2d4]";
 ---
 
 <!doctype html>
@@ -12,11 +20,11 @@ import Header from "../components/Header.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Elia Utsav</title>
   </head>
-  <body class="bg-[#FDFBD4] flex flex-col items-center">
+  <body class=`${backgroundClass} flex flex-col items-center`>
     <Header />
-    <!-- <Carousel /> -->
+
     <slot />
-    <div class="w-full text-[0.75rem] flex justify-between p-2 md:w-[50%]">
+    <div class="w-full text-[0.75rem] flex justify-between p-2 lg:w-[50%]">
       <a href="/Elia-Utsav-NGO/kashmir">Kashmir</a>
       <a href="/Elia-Utsav-NGO/kerala">Kerala</a>
       <a href="/Elia-Utsav-NGO/madhyapradesh">Madhya Pradesh</a>

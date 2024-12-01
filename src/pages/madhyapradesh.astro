@@ -1,13 +1,19 @@
 ---
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
+import mp1 from "../assets/mp1.jpg";
+import mp2 from "../assets/mp2.jpg";
+import mp3 from "../assets/mp3.jpg";
+import mp4 from "../assets/mp4.jpg";
+
+const images = [mp1, mp2, mp3, mp4];
 ---
 
 <Layout>
   <div class="w-full flex flex-col flex-1 items-center">
-    <Carousel />
+    <Carousel images={images} />
     <div
-      class="flex-1 bg-madhyapradesh bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center md:w-[50%]"
+      class="flex-1 bg-madhyapradesh bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center lg:w-[50%]"
     >
       <div class="w-full text-center">
         <h2 class="text-[2rem]">Madhya Pradesh</h2>

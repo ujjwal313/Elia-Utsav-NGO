@@ -1,13 +1,19 @@
 ---
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
+import km1 from "../assets/kashmir-1.jpg";
+import km2 from "../assets/kashmir-2.jpg";
+import km3 from "../assets/kashmir-3.jpg";
+import km4 from "../assets/kashmir-4.jpg";
+
+const images = [km1, km2, km3, km4];
 ---
 
 <Layout>
   <div class="w-full flex flex-col flex-1 items-center">
-    <Carousel />
+    <Carousel images={images} />
     <div
-      class="flex-1 bg-kashmir bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center md:w-[50%]"
+      class="flex-1 bg-kashmir bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center lg:w-[50%]"
     >
       <div class="w-full text-center">
         <h2 class="text-[2rem]">Jammu & Kashmir</h2>

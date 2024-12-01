@@ -1,13 +1,19 @@
 ---
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
+import mh1 from "../assets/mh-1.jpg";
+import mh2 from "../assets/mh-2.jpg";
+import mh3 from "../assets/mh-3.jpg";
+import mh4 from "../assets/mh-4.jpg";
+
+const images = [mh1, mh2, mh3, mh4];
 ---
 
 <Layout>
   <div class="w-full flex flex-col flex-1 items-center">
-    <Carousel />
+    <Carousel images={images} />
     <div
-      class="flex-1 bg-maharashtra bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center md:w-[50%]"
+      class="flex-1 bg-maharashtra bg-no-repeat bg-cover bg-center p-2 flex flex-col items-center lg:w-[50%]"
     >
       <div class="w-full text-center">
         <h2 class="text-[2rem]">Maharashtra</h2>
