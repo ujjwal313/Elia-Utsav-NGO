@@ -10,7 +10,7 @@ const { images } = Astro.props;
 <div class="swiper w-full lg:w-[50%]">
   <div class="swiper-wrapper">
     {
-      images.map((img: any) => (
+      images?.map((img: any) => (
         <div class="swiper-slide">
           <Picture
             src={img}
